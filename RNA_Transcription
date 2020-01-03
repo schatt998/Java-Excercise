@@ -1,0 +1,53 @@
+import java.util.*;
+import java.io.*;
+public class RNA_Transcription
+{
+	public static void main(String args[]) throws IOException
+	{ 
+		char a;
+		try 
+	  {
+		ArrayList RNA_Strand = new ArrayList(10);
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter DNA Strand " + "\n"+ "It must contain only 'A' , 'C', 'T' ,'G'");
+		
+		String str=sc.nextLine();
+		
+		for(int i=0;i<str.length();i++)
+		{
+			a=str.charAt(i);
+			
+			switch(a)
+			{
+				case 'A':
+							RNA_Strand.add(i,'U');
+							break;
+				case 'C':
+							RNA_Strand.add(i,'G');
+							break;
+				case 'G':
+							RNA_Strand.add(i,'C');
+							break;
+				case 'T':
+							RNA_Strand.add(i,'A');
+							break;
+				default :
+							System.out.println("\nWrong DNA Strand ");
+							System.exit(0);
+			}
+		}
+		
+		System.out.println("RNA Transcription");
+		Iterator iterator = RNA_Strand.iterator();
+        while(iterator.hasNext()) 
+		{
+           System.out.print(iterator.next());
+		}
+	}
+    catch(Exception e)
+    {
+		System.out.print(e);
+    }
+}
+}

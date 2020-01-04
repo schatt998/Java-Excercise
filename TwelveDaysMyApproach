@@ -1,0 +1,53 @@
+import java.util.*;
+class TwelveDaysMyApproach
+{
+	public static void main(String args[])
+	{
+		ArrayList<String> songLyrics = new ArrayList<String>();
+		ArrayList<String> dayNo = new ArrayList<String>();
+		
+		songLyrics.add("a Partridge in a Pear Tree.");
+		songLyrics.add("two Turtle Doves");
+		songLyrics.add("three French Hens");
+		songLyrics.add("four Calling Birds");
+		songLyrics.add("five Gold Rings");
+		songLyrics.add("six Geese-a-Laying");
+		songLyrics.add("seven Swans-a-Swimming");
+		songLyrics.add("eight Maids-a-Milking");
+		songLyrics.add("nine Ladies Dancing");
+		songLyrics.add("ten Lords-a-Leaping");
+		songLyrics.add("eleven Pipers Piping");
+		songLyrics.add("twelve Drummers Drumming");
+		
+		dayNo.add("first");
+		dayNo.add("second");
+		dayNo.add("third");
+		dayNo.add("fourth");
+		dayNo.add("fifth");
+		dayNo.add("sixth");
+		dayNo.add("seventh");
+		dayNo.add("eighth");
+		dayNo.add("ninth");
+		dayNo.add("tenth");
+		dayNo.add("eleventh");
+		dayNo.add("twelveth");
+			
+		
+		for(int i=0;i<12;i++)
+		{
+			System.out.print("On the ");
+			System.out.print(dayNo.get(i));
+			System.out.print(" day of Christmas my true love gave to me: ");
+			
+			for(int j=i;j>=1;j--)
+		  {
+			 System.out.println(songLyrics.get(j)+", ");
+			 if(j==1)
+				 System.out.print("and ");
+			 
+		  }
+		  System.out.println(songLyrics.get(0));
+		  
+		}
+	}
+}
